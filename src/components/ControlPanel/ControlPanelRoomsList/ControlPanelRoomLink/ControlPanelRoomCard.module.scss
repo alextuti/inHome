@@ -1,0 +1,68 @@
+@import "../../../../styles/variables.module.scss";
+
+.ControlPanelRoomCard {
+  display: block;
+  text-decoration: none;
+  color: $dark-color;
+  margin: auto;
+  background-color: $light-gray;
+  border: $gray-border-s;
+  border-radius: $border-radius-x;
+  margin-bottom: 24px;
+}
+
+.ControlPanelRoomCard:hover {
+  box-shadow: $box-shadow-s;
+  transform: $magnify-s;
+  transition: $fast-transition-out;
+}
+
+.ControlPanelRoomCard:not(:hover) {
+  box-shadow: none;
+  transform: none;
+  transition: $fast-transition-in;
+}
+
+.ControlPanelRoomCard_active {
+  box-shadow: $box-shadow-s;
+  background-color: $dark-color;
+  color: $light-color;
+  transition: $medium-transition-out;
+}
+
+.ControlPanelRoomCard__Content {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "temperature humidity";
+
+  width: 260px;
+  height: 160px;
+  padding: 20px 20px 0 20px;
+}
+
+.ControlPanelRoomCard__Title {
+  grid-area: title;
+  font-size: $font-size-m;
+  font-weight: $font-weight-m-bold;
+  margin: 0;
+}
+
+.ControlPanelRoomCard__Temperature {
+  grid-area: temperature;
+}
+
+.ControlPanelRoomCard__Humidity {
+  grid-area: humidity;
+}
+
+.ControlPanelRoomCard__Heading {
+  font-size: $font-size-s;
+  font-weight: $font-weight-medium;
+  margin: 0;
+}
+
+.ControlPanelRoomCard__Value {
+  margin: 10px 0 0 0;
+  font-size: $font-size-s;
+}

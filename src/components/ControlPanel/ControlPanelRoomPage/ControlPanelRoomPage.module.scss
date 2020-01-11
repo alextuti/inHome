@@ -1,0 +1,24 @@
+@import "../../../styles/variables.module.scss";
+
+.ControlPanelRoomPage {
+  padding: 0 24px;
+  display: grid;
+  grid-template-rows: 60px 1fr 1fr;
+  row-gap: 24px;
+}
+
+.ControlPanelRoomPage__Header {
+  font-size: $font-size-x;
+}
+
+.ControlPanelRoomPage__Utilities {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.ControlPanelRoomPage__Devices {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}

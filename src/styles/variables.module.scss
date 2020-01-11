@@ -1,0 +1,39 @@
+// Colors
+$medium-gray: rgba(230, 229, 242, 0.81);
+$light-gray: rgb(245, 245, 245);
+$light-color: white;
+$dark-color: black;
+
+// Borders
+$gray-border-s: 1px solid $medium-gray;
+$border-radius-x: 25px;
+$border-radius-circle: 50%;
+
+// Box shadows out
+$box-shadow-s: 0 11px 34px rgba(206, 205, 205, 0.36);
+
+// Box shadows in
+$box-shadow-in-s: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+
+// Transform
+$magnify-x: perspective(1500px) translateZ(100px);
+$magnify-m: perspective(2000px) translateZ(100px);
+$magnify-s: perspective(4000px) translateZ(100px);
+
+// Transition
+$slow-transition-out: all 1.2s ease-out;
+$slow-transition-in: all 1.2s ease-in;
+$medium-transition-out: all 0.6s ease-out;
+$medium-transition-in: all 0.6s ease-in;
+$fast-transition-out: all 0.3s ease-out;
+$fast-transition-in: all 0.3s ease-in;
+
+//Font
+$font-size-xs: 12px;
+$font-size-s: 16px;
+$font-size-m: 24px;
+$font-size-x: 32px;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-m-bold: 600;
+$font-weight-bold: 700;
