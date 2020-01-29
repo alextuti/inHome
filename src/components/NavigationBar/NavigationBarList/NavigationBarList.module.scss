@@ -6,3 +6,12 @@
   display: grid;
   grid-auto-rows: 1fr;
 }
+
+@media screen and (max-width: 768px) {
+  .NavigationBarList {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

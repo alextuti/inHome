@@ -23,7 +23,7 @@
   transition: $fast-transition-in;
 }
 
-.ControlPanelRoomCard_active {
+.ControlPanelRoomCard--active {
   box-shadow: $box-shadow-s;
   background-color: $dark-color;
   color: $light-color;
@@ -65,4 +65,18 @@
 .ControlPanelRoomCard__Value {
   margin: 10px 0 0 0;
   font-size: $font-size-s;
+}
+
+@media screen and (max-width: 1024px) {
+  .ControlPanelRoomCard {
+    margin-right: 16px;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ControlPanelRoomCard__Content {
+    width: 200px;
+    height: 100px;
+  }
 }

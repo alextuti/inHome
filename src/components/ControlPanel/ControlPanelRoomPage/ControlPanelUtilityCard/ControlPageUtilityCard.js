@@ -1,11 +1,14 @@
 import React from "react";
-import SlidingMeter from "../../../SlidingMeter/SlidingMeter";
+import SlidingMeter from "../../../InputComponents/SlidingMeter/SlidingMeter";
 
 import classes from "./ControlPanelUtilityCard.module.scss";
 
 const ControlPanelUtilityCard = props => {
   return (
-    <article className={classes.ControlPanelUtilityCard}>
+    <article
+      className={classes.ControlPanelUtilityCard}
+      style={{ gridArea: props.utilityName }}
+    >
       <h2 className={classes.ControlPanelUtilityCard__Header}>
         {props.utilityName}
       </h2>

@@ -1,0 +1,94 @@
+@import "../../../styles/variables.module.scss";
+
+.MemberCard {
+  width: 370px;
+  height: 32px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 200px 10px 80px;
+  column-gap: 32px;
+  align-items: center;
+  background: $light-gray;
+  border-radius: $border-radius-x;
+  border: $gray-border-s;
+}
+
+.MemberCard__Figure {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    border-radius: $border-radius-circle;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    border: $gray-border-s;
+  }
+
+  figcaption {
+    padding-left: 8px;
+  }
+}
+
+.MemberCard__Status {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: $font-size-xs;
+  font-weight: 600;
+}
+
+.MemberCard__Status--green {
+  color: $green;
+}
+
+.MemberCard__Status--red {
+  color: $red;
+}
+
+.MemberCard__Role {
+  border-radius: $border-radius-x;
+  color: $light-color;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: $font-size-xs;
+  line-height: $font-size-xs;
+  height: $font-size-xs;
+  padding: 8px 0;
+}
+
+.MemberCard__Role--green {
+  background: $green;
+}
+
+.MemberCard__Role--yellow {
+  background: $yellow;
+}
+
+@media screen and (max-width: 480px) {
+  .MemberCard {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "figure figure"
+      "status role";
+    width: 200px;
+    height: 80px;
+    padding: 8px;
+  }
+
+  .MemberCard__Figure {
+    grid-area: figure;
+  }
+
+  .MemberCard__Status {
+    grid-area: status;
+    text-align: left;
+    padding-left: 4px;
+  }
+
+  .MemberCard__Role {
+    grid-area: role;
+  }
+}

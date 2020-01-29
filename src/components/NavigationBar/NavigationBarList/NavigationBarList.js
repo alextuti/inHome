@@ -12,17 +12,16 @@ const NavigationBarList = () => {
         link="/control-panel"
       />
       <NavigationBarListItem
-        icon="settings"
-        alt="Settings link icon"
-        link="/settings"
-      />
-      <NavigationBarListItem
         icon="statistics"
         alt="Statistics link icon"
         link="/statistics"
       />
-      <NavigationBarListItem icon="media" alt="Media link icon" link="/media" />
-      <NavigationBarListItem icon="help" alt="Help link icon" link="/help" />
+      <NavigationBarListItem icon="help" alt="Help link icon" link="/faq" />
+      <NavigationBarListItem
+        icon="settings"
+        alt="Settings link icon"
+        link="/settings"
+      />
     </ul>
   );
 };

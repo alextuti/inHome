@@ -1,0 +1,27 @@
+@import "../../../styles/variables.module.scss";
+
+.SettingCard {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  column-gap: 16px;
+  label {
+    margin: auto;
+  }
+}
+
+.SettingCard__Text {
+  p {
+    padding: 2px 0;
+    margin: 0;
+  }
+
+  :first-child {
+    font-size: $font-size-s;
+    font-weight: $font-weight-m-bold;
+  }
+
+  :last-child {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-light;
+  }
+}

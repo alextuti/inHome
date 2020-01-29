@@ -8,7 +8,7 @@ const ControlPanelRoomCard = props => {
     <NavLink
       to={"/control-panel/" + props.roomLink}
       className={classes.ControlPanelRoomCard}
-      activeClassName={classes.ControlPanelRoomCard_active}
+      activeClassName={classes["ControlPanelRoomCard--active"]}
     >
       <article className={classes.ControlPanelRoomCard__Content}>
         <h1 className={classes.ControlPanelRoomCard__Title}>

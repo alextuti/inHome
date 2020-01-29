@@ -1,24 +1,30 @@
 import React from "react";
-
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
+import ControlPanel from "./components/ControlPanel/ControlPanel";
+import Statistics from "./components/Statistics/Statistics";
+import Settings from "./components/Settings/Settings";
+import FAQ from "./components/FAQ/FAQ";
 
 import classes from "./App.module.scss";
-import ControlPanel from "./components/ControlPanel/ControlPanel";
 
 function App() {
   return (
     <BrowserRouter>
       <div className={classes.App}>
+        <header className={classes.App__Header}>
+          <h1>inHome</h1>
+        </header>
         <NavigationBar />
         <Switch>
-          <Route path="/" exact render={() => <h1>Home</h1>} />
           <Route path="/control-panel" component={ControlPanel} />
-          <Route path="/settings" render={() => <h1>Something1</h1>} />
-          <Route path="/statistics" render={() => <h1>Something2</h1>} />
-          <Route path="/media" render={() => <h1>Something3</h1>} />
-          <Route path="/help" render={() => <h1>Something4</h1>} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/statistics" component={Statistics} />
+          <Route path="/faq" component={FAQ} />
         </Switch>
+      </div>
+      <div className={classes.RotateDevice}>
+        <h1>Please rotate your device!</h1>
       </div>
     </BrowserRouter>
   );

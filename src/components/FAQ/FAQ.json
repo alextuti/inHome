@@ -1,0 +1,18 @@
+[
+  {
+    "summary": "How can I add a new device?",
+    "details": "You can add a new device by turning on the Bluetooth and connect to the Smart Home App.  Once it is connected, the application will keep track of the activity of that device unless you choose to remove it."
+  },
+  {
+    "summary": "Can I choose to automatically pay the utilities through the app?",
+    "details": "Yes, you can add your bank account details in the Administration page and the money will be deducted every month at the due date."
+  },
+  {
+    "summary": "How can I add a new member to the app?",
+    "details": "In the Settings page you will find an 'Add member' button that lets you add new members to the app."
+  },
+  {
+    "summary": "Will I get a notification in case of theft?",
+    "details": "You can set to get a notification when suspicious activity is detected around the house. For this, check the option available in the Settings page."
+  }
+]

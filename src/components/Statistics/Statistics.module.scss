@@ -1,0 +1,15 @@
+.Statistics {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: calc(100vh - 160px);
+  padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .Statistics {
+    overflow: scorll;
+    height: 800px;
+    padding: 20px 0;
+  }
+}

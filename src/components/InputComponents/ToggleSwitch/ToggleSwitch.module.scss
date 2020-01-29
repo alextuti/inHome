@@ -1,0 +1,55 @@
+@import "../../../styles/variables.module.scss";
+
+.Checkbox__Label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.Checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.Checkbox__Slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: $light-color;
+  border-radius: $border-radius-x;
+  box-shadow: $box-shadow-in-s;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+
+.Checkbox__Slider::before {
+  position: absolute;
+  left: -1px;
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: $gray-border-s;
+  background: $dark-color;
+  opacity: 0.5;
+  border-radius: $border-radius-circle;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+
+.Checkbox:checked + .Checkbox__Slider {
+  background-color: $dark-color;
+}
+
+.Checkbox:checked + .Checkbox__Slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  left: 1px;
+  background: $light-color;
+  opacity: 1;
+}

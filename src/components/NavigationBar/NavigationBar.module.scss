@@ -3,3 +3,23 @@
   height: calc(100vh - 120px);
   z-index: 1000;
 }
+
+@media screen and (max-width: 768px) {
+  .NavigationBar {
+    width: calc(100vw - 64px);
+    height: 60px;
+    grid-area: navbar;
+    padding: 0 16px;
+    position: fixed;
+    bottom: 0;
+    background: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .NavigationBar {
+    position: fixed;
+    bottom: 0;
+    background: white;
+  }
+}

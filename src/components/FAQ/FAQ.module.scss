@@ -1,0 +1,10 @@
+.FAQ {
+  padding: 36px 32px;
+}
+
+@media screen and (max-width: 480px) {
+  .FAQ {
+    overflow: scroll;
+    padding: 36px 0;
+  }
+}

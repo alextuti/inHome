@@ -3,3 +3,51 @@
   display: grid;
   grid-template-columns: 100px 1fr;
 }
+
+.App__Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  color: white;
+  text-align: center;
+  z-index: 9999;
+
+  h1 {
+    background: black;
+    line-height: 60px;
+    margin: 0;
+  }
+}
+
+.RotateDevice {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 60px 16px 0 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60px;
+    grid-template-areas:
+      "main"
+      "navbar";
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    grid-template-rows: calc(100vh - 76px) 60px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .RotateDevice {
+    display: block;
+  }
+
+  .App {
+    display: none;
+  }
+}

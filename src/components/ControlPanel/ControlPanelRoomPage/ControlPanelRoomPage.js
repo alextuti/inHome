@@ -13,7 +13,7 @@ const ControlPanelRoomPage = props => {
       .then(res => {
         const devices = [];
         res.data.devices.map(device => {
-          devices.push(device);
+          return devices.push(device);
         });
         updateDevicesState(devices);
       })
@@ -24,6 +24,9 @@ const ControlPanelRoomPage = props => {
     <section className={classes.ControlPanelRoomPage}>
       <h1 className={classes.ControlPanelRoomPage__Header}>{props.roomName}</h1>
       <section className={classes.ControlPanelRoomPage__Utilities}>
+        <h2 className={classes.ControlPanelRoomPage__Utilities__Header}>
+          Utilities
+        </h2>
         <ControlPanelUtilityCard
           utilityName="temperature"
           room={props.roomName}
@@ -34,18 +37,23 @@ const ControlPanelRoomPage = props => {
         />
       </section>
       <section className={classes.ControlPanelRoomPage__Devices}>
-        {devicesState.map((device, i) => {
-          return (
-            <ControlPanelDeviceCard
-              key={device[0] + "-" + props.roomName}
-              deviceName={device[0]}
-              on={device[1]}
-              url={props.url}
-              index={i}
-              room={props.roomName}
-            />
-          );
-        })}
+        <h2 className={classes.ControlPanelRoomPage__Devices__Header}>
+          Devices
+        </h2>
+        <section className={classes.ControlPanelRoomPage__Devices__List}>
+          {devicesState.map((device, i) => {
+            return (
+              <ControlPanelDeviceCard
+                key={device[0] + "-" + props.roomName}
+                deviceName={device[0]}
+                on={device[1]}
+                url={props.url}
+                index={i}
+                room={props.roomName}
+              />
+            );
+          })}
+        </section>
       </section>
     </section>
   );

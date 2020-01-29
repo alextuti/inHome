@@ -17,4 +17,19 @@
 .ControlPanelUtilityCard__Header {
   text-transform: capitalize;
   text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .ControlPanelUtilityCard__Header {
+    display: none;
+  }
+
+  .ControlPanelUtilityCard {
+    padding: 0;
+    display: inline-block;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
 }

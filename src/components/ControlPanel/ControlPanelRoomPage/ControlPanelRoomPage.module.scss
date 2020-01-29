@@ -1,24 +1,95 @@
 @import "../../../styles/variables.module.scss";
 
 .ControlPanelRoomPage {
-  padding: 0 24px;
+  padding: 0 36px;
   display: grid;
-  grid-template-rows: 60px 1fr 1fr;
-  row-gap: 24px;
+  grid-template-rows: 40px 200px 200px;
+  row-gap: 36px;
 }
 
 .ControlPanelRoomPage__Header {
   font-size: $font-size-x;
+  margin: 0;
 }
 
 .ControlPanelRoomPage__Utilities {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 1fr;
+  grid-template-areas:
+    "header header"
+    "temperature luminosity";
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
+.ControlPanelRoomPage__Utilities__Header {
+  grid-area: header;
+  margin: 0;
 }
 
 .ControlPanelRoomPage__Devices {
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  flex-direction: column;
+}
+
+.ControlPanelRoomPage__Devices__List {
+  display: flex;
+  flex-direction: row;
+
+  article {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .ControlPanelRoomPage__Header {
+    display: none;
+  }
+
+  .ControlPanelRoomPage {
+    display: flex;
+  }
+
+  .ControlPanelRoomPage__Devices {
+    margin-left: 24px;
+  }
+
+  .ControlPanelRoomPage__Devices__Header {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ControlPanelRoomPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0;
+  }
+
+  .ControlPanelRoomPage__Header {
+    display: none;
+  }
+
+  .ControlPanelRoomPage__Utilities {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    column-gap: 32px;
+  }
+
+  .ControlPanelRoomPage__Devices__Header {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .ControlPanelRoomPage__Devices__List {
+    display: flex;
+    flex-direction: column;
+
+    article {
+      margin-top: 16px;
+    }
+  }
 }

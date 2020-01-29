@@ -1,0 +1,56 @@
+@import "../../styles/variables.module.scss";
+
+.Settings {
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 1fr;
+  grid-template-areas:
+    "notifications members"
+    "power members";
+  row-gap: 16px;
+  padding: 0 32px;
+}
+
+.Settings__Category__Notifications {
+  grid-area: notifications;
+}
+
+.Settings__Category__Power {
+  grid-area: power;
+}
+
+.Settings__Category__Members {
+  grid-area: members;
+}
+
+.Settings__Category__List {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  max-width: 500px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  row-gap: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .Settings {
+    grid-template-areas:
+      "notifications power"
+      "members members";
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Settings {
+    grid-template: unset;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+      "notifications"
+      "power"
+      "members";
+    padding: 0 16px;
+    overflow: scroll;
+  }
+}

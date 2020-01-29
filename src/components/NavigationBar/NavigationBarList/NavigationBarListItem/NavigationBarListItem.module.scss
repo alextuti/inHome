@@ -20,9 +20,25 @@
   filter: opacity(0.5) grayscale(100%);
 }
 
-.NavigationBarListItem__Link_active {
-  box-shadow: 2px 0 0 0 red;
+.NavigationBarListItem__Link--active {
+  box-shadow: 3px 0 0 -1px red;
   .NavigationBarListItem__Link__Icon {
     filter: opacity(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .NavigationBarListItem {
+    display: block;
+  }
+
+  .NavigationBarListItem__Link {
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
+
+  .NavigationBarListItem__Link--active {
+    box-shadow: none;
   }
 }

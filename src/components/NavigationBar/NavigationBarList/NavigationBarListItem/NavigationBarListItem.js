@@ -8,7 +8,7 @@ const NavigationBarListItem = props => {
       <NavLink
         to={props.link}
         className={classes.NavigationBarListItem__Link}
-        activeClassName={classes.NavigationBarListItem__Link_active}
+        activeClassName={classes["NavigationBarListItem__Link--active"]}
       >
         <img
           src={require(`../../../../assets/icons/${props.icon}.svg`)}

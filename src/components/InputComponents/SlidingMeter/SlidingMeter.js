@@ -43,7 +43,10 @@ const SlidingMeter = props => {
         {meterUnit}
       </span>
       <input
-        className={classes.SlidingMeter__Range}
+        className={[
+          classes.SlidingMeter__Range,
+          classes["SlidingMeter__Gradient--" + props.meterType]
+        ].join(" ")}
         type="range"
         name={props.id}
         id={props.id}
@@ -54,12 +57,6 @@ const SlidingMeter = props => {
         value={slidingMeterValue}
         onChange={e => updateSlidingMeterValue(e.target.value)}
       />
-      <div
-        className={[
-          classes.SlidingMeter__Gradient,
-          classes["SlidingMeter__Gradient--" + props.meterType]
-        ].join(" ")}
-      ></div>
     </div>
   );
 };
